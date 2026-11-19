@@ -1,0 +1,1633 @@
+
+/* =========================================
+   KAY'S LEARNING HUB
+   Main Website Stylesheet
+========================================= */
+
+/* 1. DESIGN SYSTEM */
+
+:root {
+    --navy: #102D5A;
+    --blue: #173F78;
+    --yellow: #F2B900;
+    --gold: #D99D00;
+    --white: #FFFFFF;
+    --light-blue: #F1F5FC;
+    --cream: #FFFAF0;
+    --text: #273449;
+    --muted: #64748B;
+    --border: #E5EAF2;
+
+    --shadow: 0 10px 30px rgba(16, 45, 90, 0.08);
+    --radius: 14px;
+}
+
+/* 2. RESET AND GLOBAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+/* 3. HEADER AND NAVIGATION */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 82px;
+    margin: auto;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--yellow);
+    color: var(--navy);
+}
+
+/* 4. HERO SECTION */
+
+.hero {
+    max-width: 1200px;
+    min-height: 590px;
+    margin: auto;
+    padding: 75px 5%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-label,
+.section-label {
+    color: #A87900;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    color: var(--navy);
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.12;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 540px;
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.hero-grade {
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background: var(--yellow);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+}
+
+.secondary-button:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* 5. TUTOR IMAGE */
+
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius);
+}
+
+/* 6. SECTION HEADINGS */
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.section-heading h2,
+.tutor-text h2 {
+    color: var(--navy);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+/* 7. WHY CHOOSE US */
+
+.why-us {
+    background: var(--light-blue);
+    padding: 85px 5%;
+}
+
+.feature-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+}
+
+/* 8. TUTORING SERVICES */
+
+.services {
+    padding: 85px 5%;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    color: var(--gold);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.service-card a:hover {
+    color: var(--gold);
+}
+
+/* 9. TUTOR PREVIEW */
+
+.tutor-preview {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 5%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.tutor-text p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.tutor-text .primary-button {
+    margin-top: 10px;
+}
+
+.tutor-qualification {
+    padding: 45px 25px;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    border-radius: var(--radius);
+    border-bottom: 6px solid var(--yellow);
+}
+
+.tutor-qualification h3 {
+    color: var(--yellow);
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.tutor-qualification h4 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.tutor-qualification p {
+    color: #DCE6F5;
+}
+
+/* 10. WHATSAPP CALL TO ACTION */
+
+.contact-cta {
+    padding: 75px 5%;
+    background: var(--navy);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    font-size: clamp(27px, 3vw, 36px);
+    margin-bottom: 18px;
+}
+
+.cta-content p {
+    color: #DCE6F5;
+    margin-bottom: 28px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 28px;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 8px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+}
+
+/* 11. FOOTER */
+
+.footer {
+    padding: 25px 15px;
+    background: #0B2143;
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 12. TABLET RESPONSIVENESS */
+
+@media (max-width: 900px) {
+    .navbar {
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .feature-container,
+    .service-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tutor-preview {
+        gap: 35px;
+    }
+}
+
+/* 13. MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 16px 5%;
+        gap: 14px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 48px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    .feature-container,
+    .service-container,
+    .tutor-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .tutor-preview {
+        gap: 35px;
+        text-align: center;
+    }
+
+    .why-us,
+    .services,
+    .tutor-preview {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .feature-card,
+    .service-card {
+        padding: 26px;
+    }
+}
+
+/* 14. ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.page-banner {
+    padding: 75px 5%;
+    background: var(--light-blue);
+    text-align: center;
+}
+
+.page-banner-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.page-banner h1 {
+    color: var(--navy);
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.page-banner-content > p:last-child {
+    color: var(--muted);
+}
+
+/* TUTOR PROFILE */
+
+.about-profile {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 5%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius);
+}
+
+.about-content h2 {
+    color: var(--navy);
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.about-content h3 {
+    color: var(--gold);
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.about-content > p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 17px;
+}
+
+.about-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.about-socials a {
+    padding: 10px 20px;
+    border: 1px solid var(--navy);
+    border-radius: 7px;
+    color: var(--navy);
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.about-socials a:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* EDUCATION */
+
+.education-section {
+    padding: 75px 5%;
+    background: var(--light-blue);
+}
+
+.education-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.education-icon {
+    min-width: 95px;
+    min-height: 95px;
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    color: var(--yellow);
+    border-radius: 12px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.education-card h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: var(--muted);
+}
+
+/* TEACHING PHILOSOPHY */
+
+.philosophy-section {
+    padding: 85px 5%;
+}
+
+.philosophy-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.philosophy-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.philosophy-number {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.philosophy-card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.philosophy-card p {
+    color: var(--muted);
+}
+
+/* ABOUT PAGE MOBILE */
+
+@media (max-width: 768px) {
+
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .about-image {
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-socials {
+        justify-content: center;
+    }
+
+    .philosophy-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .education-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================
+   TUTORING PAGE
+========================================= */
+
+.tutoring-intro {
+    max-width: 900px;
+    margin: auto;
+    padding: 75px 5%;
+    text-align: center;
+}
+
+.tutoring-intro-content h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 20px;
+}
+
+.tutoring-intro-content p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+/* SERVICE CARDS */
+
+.tutoring-services {
+    padding: 80px 5%;
+    background: var(--light-blue);
+}
+
+.tutoring-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tutoring-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+}
+
+.tutoring-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.tutoring-icon {
+    color: var(--gold);
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.tutoring-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.tutoring-card > p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.tutoring-card h4 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.tutoring-card ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+.tutoring-card li {
+    margin-bottom: 8px;
+}
+
+.service-contact {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 15px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.service-contact:hover {
+    color: var(--gold);
+}
+
+/* GRADE LEVELS */
+
+.grade-section {
+    padding: 80px 5%;
+}
+
+.grade-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.grade-card {
+    padding: 35px 25px;
+    background: var(--light-blue);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.grade-card span {
+    color: var(--gold);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.grade-card h3 {
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.grade-card p {
+    color: var(--muted);
+}
+
+/* LEARNING PROCESS */
+
+.learning-process {
+    padding: 80px 5%;
+    background: var(--cream);
+}
+
+.process-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.process-card {
+    padding: 30px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.process-card span {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.process-card h3 {
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.process-card p {
+    color: var(--muted);
+}
+
+/* TUTORING PAGE RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    .tutoring-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .tutoring-grid,
+    .grade-container,
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tutoring-intro,
+    .tutoring-services,
+    .grade-section,
+    .learning-process {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+
+/* ==============================
+   GALLERY PAGE
+================================= */
+
+.gallery-intro {
+    padding: 65px 20px 30px;
+}
+
+.gallery-intro .section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.gallery-intro .section-heading p {
+    max-width: 650px;
+    margin: 15px auto 0;
+    line-height: 1.8;
+}
+
+.gallery-section {
+    padding: 35px 20px 85px;
+    background: var(--light-blue);
+}
+
+.gallery-section .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.gallery-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.gallery-caption {
+    padding: 24px;
+}
+
+.gallery-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.gallery-caption h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.gallery-caption p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+
+/* Gallery Responsive Layout */
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .gallery-section {
+        padding: 30px 18px 65px;
+    }
+
+    .gallery-caption {
+        padding: 20px;
+    }
+}
+
+
+/* ==============================
+   CONTACT PAGE
+================================= */
+
+.contact-intro {
+    padding: 65px 20px 35px;
+}
+
+.contact-intro .section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-intro .section-heading p {
+    max-width: 650px;
+    margin: 15px auto 0;
+    line-height: 1.8;
+}
+
+.contact-details-section {
+    padding: 35px 20px 85px;
+    background: var(--light-blue);
+}
+
+.contact-details-section .container,
+.social-section .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.contact-info-card {
+    padding: 32px 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    background: var(--light-blue);
+    color: var(--blue);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.contact-info-card h3 {
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: 1.2rem;
+}
+
+.contact-info-card p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.contact-info-card a,
+.contact-detail-text {
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* Social Media Section */
+
+.social-section {
+    padding: 80px 20px;
+}
+
+.social-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-content h2 {
+    margin: 12px 0;
+    color: var(--navy);
+    font-size: 2rem;
+}
+
+.social-content p {
+    margin: 0 auto;
+    max-width: 600px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.social-links a:hover {
+    background: var(--blue);
+}
+
+
+/* Contact Responsive Layout */
+
+@media (max-width: 900px) {
+    .contact-details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details-section {
+        padding: 30px 18px 60px;
+    }
+
+    .social-section {
+        padding: 60px 18px;
+    }
+
+    .social-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* =========================================
+   FINAL WEBSITE QUALITY IMPROVEMENTS
+========================================= */
+
+/* Consistent page behaviour */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Consistent navigation */
+
+.navbar {
+    width: 100%;
+}
+
+.nav-links a {
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+
+/* Consistent buttons */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+
+/* Improve card presentation */
+
+.feature-card,
+.service-card,
+.philosophy-card,
+.tutoring-card,
+.grade-card,
+.process-card,
+.gallery-card,
+.contact-info-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.philosophy-card:hover,
+.tutoring-card:hover,
+.grade-card:hover,
+.process-card:hover,
+.gallery-card:hover,
+.contact-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+
+/* Image presentation */
+
+.hero-image img,
+.about-image img,
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Footer consistency */
+
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+/* Responsive typography */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+}
+
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* Mathematics visual gallery card */
+
+.maths-visual {
+    padding: 38px 30px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.maths-visual h3 {
+    margin: 16px 0 10px;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.maths-visual > p {
+    line-height: 1.7;
+    color: #E4EAF5;
+}
+
+.equation-display {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 28px 0;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.equation-display span {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.maths-visual .maths-visual-footer {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+
+/* Homepage tutor credential summary */
+
+.credential-divider {
+    height: 1px;
+    margin: 20px 0;
+    background: var(--border);
+}
+
+.tutor-qualification .section-label {
+    margin-bottom: 12px;
+}
+
+.tutor-qualification .credential-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tutor-qualification .credential-item strong {
+    color: var(--navy);
+}
+
+.tutor-qualification .credential-item span {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+
+/* Mathematics visual gallery card refinements */
+
+.maths-visual-card {
+    overflow: hidden;
+}
+
+.maths-visual {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.maths-visual .gallery-category {
+    color: var(--yellow);
+}
+
+@media (max-width: 480px) {
+    .maths-visual {
+        padding: 30px 22px;
+    }
+
+    .maths-visual h3 {
+        font-size: 1.5rem;
+    }
+
+    .equation-display {
+        padding: 18px;
+    }
+}
+
+
+/* =========================================
+   FINAL MOBILE NAVIGATION FIX
+   Breakpoint: 768px
+========================================= */
+
+/* Hide hamburger menu on desktop */
+.menu-toggle {
+    display: none;
+}
+
+
+/* Mobile and tablet navigation */
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        min-height: 72px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    /* Website logo */
+    .navbar .logo {
+        width: auto;
+        text-align: left;
+        font-size: clamp(17px, 4vw, 22px);
+        flex-shrink: 1;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--navy);
+        font-size: 25px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: var(--light-blue);
+    }
+
+    /* Hide desktop WhatsApp navigation button */
+    .navbar > .nav-button {
+        display: none;
+    }
+
+    /* Collapsed navigation */
+    .navbar .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        width: 100%;
+        gap: 0;
+        padding: 10px 5% 18px;
+
+        background: var(--white);
+        box-shadow: 0 12px 20px rgba(16, 45, 90, 0.10);
+
+        list-style: none;
+    }
+
+    /* Expanded navigation */
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links li {
+        width: 100%;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 15px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navbar .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .navbar .nav-links a.active {
+        color: var(--gold);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION SMALL-SCREEN REFINEMENT
+========================================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 8px;
+    }
+
+    .navbar .logo {
+        font-size: 17px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+}
